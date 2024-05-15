@@ -26,7 +26,7 @@ export default function Categories() {
                                     </Link>
                                 </div>
                                 <div className="categories-card">
-                                    <img src="https://karamelcafe.ru/wp-content/uploads/a/8/d/a8de5ffd397c49bddfa06bfe7a6f6d13.jpeg" alt="" />
+                                    <img src="https://food.pibig.info/uploads/posts/2023-04/1681317605_food-pibig-info-p-blyudo-befstroganov-pinterest-4.jpg" alt="" />
                                     <h4>Гарниры</h4>
                                     <p>Гарнир - это настоящая путта из индийского кулинарного искусства. Он состоит из разнообразных ароматов и вкусов, которые обеспечивают вам нежную и неповторимую кухню.</p>
                                     <Link to={`/products/2`} className="card-btn btn">
