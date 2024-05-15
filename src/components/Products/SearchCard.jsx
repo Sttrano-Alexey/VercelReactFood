@@ -5,9 +5,7 @@ import plus from '../../Images/icons/plus.svg';
 
 export default function SearchCard({ id, name, img, price, card_description }) {
 
-    useEffect(() => {
-        console.log('Props:', { id, name, img, price, card_description });
-      }, [id, name, img, price, card_description]);
+    useEffect(() => {}, [id, name, img, price, card_description]);
   const [isAdded, setIsAdded] = useState(false);
   const [count, setCount] = useState(1);
 

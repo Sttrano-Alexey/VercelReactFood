@@ -24,8 +24,6 @@ const fetchProducts = async (categoryId) => {
 
 export default function ProductsMain() {
 
-
-
     const [products, setProducts] = useState([]);
     const [allProducts, setAllProducts] = useState([]);
     const [visibleCount, setVisibleCount] = useState(8);
@@ -34,18 +32,18 @@ export default function ProductsMain() {
     useEffect(() => {
         fetchProducts(categoryId).then(data => {
             setAllProducts(data);
-            setProducts(data.slice(0, visibleCount));
+            const initialProducts = data.length > 8 ? data.slice(0, visibleCount) : data;
+            setProducts(initialProducts);
         });
     }, [categoryId]);
 
-
-    const loadMoreProducts = () => {
-        if (products.length < allProducts.length) {
-            setProducts(allProducts);
-        } else {
-            setProducts(allProducts.slice(0, visibleCount));
-        }
-    };
+        const loadMoreProducts = () => {
+                if (products.length < allProducts.length) {
+                    setProducts(allProducts);
+                } else {
+                    setProducts(allProducts.slice(0, visibleCount));
+                }
+            };
 
     return (
         <>
@@ -55,13 +53,14 @@ export default function ProductsMain() {
                     <div className="productsList-items">
                         {products.map(item => <ProductsCard key={item.id} {...item} />)}
                     </div>
-                    <button
-
-                        id="show-more-btn"
-                        className="show-more-btn btn"
-                        onClick={loadMoreProducts}>
-                        {products.length < allProducts.length ? 'Загрузить еще' : 'Скрыть'}
-                    </button>
+                    {allProducts.length > 8 && (
+                        <button
+                            id="show-more-btn"
+                            className="show-more-btn btn"
+                            onClick={loadMoreProducts}>
+                            {products.length < allProducts.length ? 'Загрузить еще' : 'Скрыть'}
+                        </button>
+                    )}
                 </div>
             </section>
         </>

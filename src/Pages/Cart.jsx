@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 // Функция для получения данных о товарах
 async function fetchProductData(ids) {
-    const response = await fetch('../../public/DATA/products.json');
+    const response = await fetch('https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json');
     const data = await response.json();
     // Используем flatMap для "выпрямления" массива товаров из всех категорий
     const allItems = data.products.flatMap(category => category.items);

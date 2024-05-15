@@ -1,25 +1,33 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SearchCard from '../components/Products/SearchCard';
-import data from 'https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json';
 
 export default function SearchPage() {
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query');
     const [filteredProducts, setFilteredProducts] = useState([]);
-
+    
     useEffect(() => {
-        if (query && query.length >= 3) {
-            const searchQuery = query.toLowerCase();
-            const allProducts = data.products.flatMap(category => category.items);
-            const matchedProducts = allProducts.filter(product =>
-                product.name.toLowerCase().includes(searchQuery) ||
-                product.full_description.toLowerCase().includes(searchQuery)
-            );
-            setFilteredProducts(matchedProducts);
-        }
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json');
+                const data = await response.json();
+                if (query && query.length >= 3) {
+                    const searchQuery = query.toLowerCase();
+                    const allProducts = data.products.flatMap(category => category.items);
+                    const matchedProducts = allProducts.filter(product =>
+                        product.name.toLowerCase().includes(searchQuery) ||
+                        product.full_description.toLowerCase().includes(searchQuery)
+                    );
+                    setFilteredProducts(matchedProducts);
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
     }, [query]);
-
+    
     return (
         <section className="searchMain">
             <div className="searchMain-container container">
