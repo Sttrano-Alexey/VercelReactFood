@@ -7,6 +7,7 @@ export default function Contacts(){
             <section className="about">
                 <div className="about-container container">
                     <h5 className="about-title title">Наши контакты</h5> 
+                    
                 </div>
             </section>
         </>
