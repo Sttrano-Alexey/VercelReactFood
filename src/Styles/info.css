@@ -1,0 +1,62 @@
+.productsInfo-body{
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    gap: 32px;
+}
+.productsInfo{
+    flex: 1 1 100%;
+    padding-top: 64px;
+}
+.productsInfo-column img{
+    height: 100%;
+    max-height: 550px;
+    width: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+.productsInfo-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.productsInfo-text{
+    font-size: 18px;
+    margin-bottom: 43px;
+}
+.productsInfo-subtitle{
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 12px;
+}
+.productsInfo-subtext{
+    color: #252525b0;
+    font-size: 18px;
+    flex: 1 1 auto;
+}
+.productsInfo-column.info{
+    padding: 24px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.productsInfo-buttons{
+    display: flex;
+    gap: 32px;
+}
+.productsInfo-buttons button{
+    height: 52px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#buy{
+    width: 229px;
+    background-color: #EAD9B5;
+    color: #252525;
+}
+#setToCart{
+    width: 182px;
+}

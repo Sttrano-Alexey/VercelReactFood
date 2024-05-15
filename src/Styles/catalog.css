@@ -1,0 +1,34 @@
+.catalog{
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 100px 0;
+}
+.catalog-bg{
+    width: 100%;
+    height: 100%;
+    background-color: #252525bd;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.catalog-title{
+    color: #fff;
+}
+.categories-items.catalogs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+.categories-card.catalogs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.categories-card.catalogs p{
+    flex: 1 1 auto;
+}

@@ -1,0 +1,28 @@
+.about-card-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.about-card p{
+    font-size: 18px;
+    
+}
+.about-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+.about-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+.about-card{
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 34px 27px;
+}
+.about-card:last-of-type{
+    grid-column: span 2;
+}

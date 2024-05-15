@@ -1,0 +1,440 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-family: "Raleway", sans-serif; */
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    background-color: #E9E9E2;
+    color: #252525;
+    overflow-x: hidden;
+    --acent-color: #36AF48;
+    min-height: 100vh !important;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+section{
+    flex: 1 1 auto !important;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.btn{
+    background-color: var(--acent-color);
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+a{
+    display: flex;
+    align-items: center;
+}
+.btn:hover{
+    transform: scale(0.97);
+    opacity: 0.8;
+}
+.btn:active{
+    transform: scale(1);
+    opacity: 1;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    background: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+.header{
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 30px;
+    align-items: center;
+}
+.header-nav ul{
+    display: flex;
+    gap: 20px;
+}
+.header-column{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.header-logo a{
+    font-size: 20px;
+    gap: 10px;
+}
+.catalog-btn{
+    height: 50px;
+    padding: 0 25px;
+    cursor: pointer;
+    margin-right: 21px;
+}
+.header-btn{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+
+.banner-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 40px 50px;
+    position: relative;
+}
+.banner-column img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.banner-title span{
+    font-size: 64px;
+    font-weight: 700;
+}
+.banner-title{
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+.banner-text{
+    font-size: 24px;
+    margin-bottom: 33px;
+}
+.banner-btn{
+    max-width: 347px;
+    font-size: 18px;
+    height: 52px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories{
+    padding-top: 90px;
+    padding-bottom: 42px;
+}
+.categories-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+.categories-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+.title{
+    font-size: 24px;
+    font-family: 'Raleway' sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.categories-card{
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 17px 22px;
+}
+.categories-card h4{
+    font-family: 'Raleway' sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.categories-card p{
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+.categories-card img{
+    margin-bottom: 13px;
+}
+.card-btn{
+    height: 39px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.categories-slider{
+    overflow: hidden;
+    height: 100%;
+}
+.categories-slider img{
+    width: 100%;
+    max-height: 806px;
+    border-radius: 12px;
+}
+
+
+
+
+.productsList{
+    padding-bottom: 90px;
+}
+
+.productsList-card{
+    max-width: 379px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+}
+.productsList-card img{
+    width: 100%;
+    margin-bottom: 16px;
+    max-height: 164px;
+    object-fit: cover;
+    flex: 1 1 auto;
+}
+.poductsList-card-body{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 157px;
+}
+.productsList-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.productsList-card-desc{
+    font-size: 13px;
+    margin-bottom: 28px;
+    flex: 1 1 auto;
+}
+.productsList-card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productsList-card-header h5{
+    font-size: 18px;
+    font-family: 'Raleway' sans-serif;
+}
+.productsList-card-header p{
+    font-size: 16px;
+    font-family: 300px;
+    background-color: #EAD9B5;
+    padding: 7px 21px;
+    border-radius: 25px;
+}
+.productsList-card-footer a{
+    font-size: 18px;
+    text-decoration: underline;
+}
+.productsList-title{
+    align-self: flex-start;
+}
+.productsList-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 55px
+}
+.show-more-btn{
+    margin-top: 61px;
+    font-size: 18px;
+    height: 48px;
+    max-width: 225px;
+    width: 100%;
+}
+.productsList-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.notification{
+    margin-bottom: 60px;
+}
+.notification-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    padding: 27px 45px;
+    border-radius: 30px;
+    align-items: center;
+}
+.notification-column.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.notification-text-logo h5{
+    font-size: 64px;
+    margin-bottom: 13px;
+    font-weight: 400;
+}
+.notification-text-logo p{
+    font-size: 24px;
+    max-width: 313px;
+}
+.notification-column-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.notification-column-form input{
+    width: 100%;
+    height: 77px;
+    border-radius: 51px;
+    border: 2px solid #535353;
+    padding: 24px 30px;
+    font-size: 18px;
+    outline: none;
+}
+.notification-column-form button{
+    cursor: pointer;
+}
+.footer{
+    background-color: #fff;
+    border-radius: 30px 30px 0 0 ;
+    padding: 29px 0;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.footer-contacts-items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.footer-phone{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+.add-to-cart-btn{
+    cursor: pointer;
+}
+.add-to-cart-btn img{
+    margin: 0 !important; 
+}
+.add-to-cart-btn svg{
+    pointer-events: none;
+}
+.added-to-cart{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+}
+.d-none{
+    display: none;
+}
+.card-count{
+    grid-area: c;
+    display: flex;
+    align-items: center !important;
+    gap: 10px;
+    align-self: flex-end;
+    justify-self: end;
+}
+.card-count-value{
+    font-size: 16px;
+    background-color: #EAD9B5;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-count button{
+    cursor: pointer;
+}
+.added-to-cart-price{
+    font-size: 16px;
+    background-color: #36AF48;
+    border-radius: 20px;
+    color: #fff;
+    height: 40px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productsList-card.added .link-to-info{
+    display: none;
+}
+.productsList-card.added .added-to-cart{
+    display: flex !important;
+    align-items: center !important;
+}
+.productsList-card.added .add-to-cart-btn{
+    display: none;
+}
+
+.card-count img{
+    margin: 0 !important;
+}   
+.card-count img{
+    max-width: 30px;
+    max-height: 30px;
+}
+.cart-card-delete img{
+    max-width: 30px;
+    max-height: 30px;
+    cursor: pointer;
+}
+.cart-a{
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #36AF48;
+    color: #fff;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-icon-div{
+    position: relative;
+}
+.categories-card img{
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.categories-slider img{
+    height: 100%;
+    object-fit: cover;
+}
