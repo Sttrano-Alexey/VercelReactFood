@@ -14,8 +14,9 @@ function App() {
   return (
     <Router>
       <CartProvider>
-        <Header></Header>
+        <Header></Header> 
         <Routes>
+          <Route index element={<Main/>}/>
           <Route path="/" element={<Main />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/productsInfo/:itemId" element={<ProductsInfo />} />
