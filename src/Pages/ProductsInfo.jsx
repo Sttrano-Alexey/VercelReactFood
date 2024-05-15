@@ -13,7 +13,7 @@ export default function ProductsInfo() {
     // Функция для загрузки данных о продукте
     const fetchProductInfo = async () => {
       try {
-        const response = await fetch('../../public/DATA/products.json'); // Загружаем JSON файл
+        const response = await fetch('https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json'); // Загружаем JSON файл
         const data = await response.json();
         const product = data.products
           .flatMap(category => category.items)

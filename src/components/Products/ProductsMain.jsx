@@ -4,7 +4,7 @@ import ProductsCard from "./ProductsCard";
 
 // Модифицированная функция для получения товаров по категории или всех товаров
 const fetchProducts = async (categoryId) => {
-    const response = await fetch('../../../public/DATA/products.json');
+    const response = await fetch('https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json');
     const data = await response.json();
     let productsArray = [];
 

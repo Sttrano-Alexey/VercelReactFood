@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SearchCard from '../components/Products/SearchCard';
-import data from '../../public/DATA/products.json';
+import data from 'https://raw.githubusercontent.com/Sttrano-Alexey/VercelReactFood/main/public/DATA/products.json';
 
 export default function SearchPage() {
     const [searchParams] = useSearchParams();
